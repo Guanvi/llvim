@@ -1,4 +1,4 @@
-""""""""luohua"""""""'
+""""""""Luohua"""""""'
 set nocompatible 
 filetype plugin on 
 set encoding=utf-8                       "使用utf-8编码
@@ -9,36 +9,30 @@ set mouse=a                              "可以在buffer的任何地方使用�
 set cursorline                           "显示当前行
 set hlsearch                             "显示高亮搜索
 set incsearch
-set ruler                                "显示行号和列号（默认打开)
+set ruler                                "显示行号和列号
 set pastetoggle=<F3>                     "F3快捷键于paste模式与否之间转化，防止自动缩进
 set helplang=cn                          "设置为中文帮助文档,需下载并配置之后才生效
-set shortmess=atI                        " 启动的时候不显示那个援助乌干达儿童的提示
-""syntax on                                " 语法高亮
+set shortmess=atI                        " 启动的时候不显示援助乌干达儿童的提示
+"syntax on                                " 语法高亮
 autocmd InsertEnter * se cul             "用浅色高亮当前行
 set showcmd                              " 输入的命令显示出来，看的清楚些
 set foldenable                           " 允许折叠
 set foldmethod=indent                    " 手动折叠
-set t_Co=256 				 "设置256色
-set history=200			         "保存200条Ex命令
-runtime macros/matchit.vim 		 "用%在关键字之间跳转
+set t_Co=256 				                     "设置256色
+set history=200			                     "保存200条Ex命令
+runtime macros/matchit.vim 		           "用%在关键字之间跳转
 
 
 
 
 """"""""主题颜色""""""""
 "colorschem molokai
-""colorschem Tomorrow-Night-Eighties
+"colorschem Tomorrow-Night-Eighties
 syntax enable
 set background=dark
 colorscheme solarized
-""hi String ctermfg=255 ctermbg=135
+"hi String ctermfg=255 ctermbg=135
 "hi LinerNr ctermfg=90 ctermbg=0
-
-
-
-
-
-
 
 
 
@@ -84,16 +78,16 @@ Plug 'https://github.com/tpope/vim-surround.git'
 
 Plug 'https://github.com/tpope/vim-rails.git'
 
-
+"其他插件......"
 
 
 
 call plug#end()
 
-nmap <F8> :TagbarToggle<CR>
-map <C-n> :NERDTreeToggle<CR>
-map mm :Minimap<CR>
-map mc :MinimapClose<CR>
+nmap <F8> :TagbarToggle<CR>                 "F8打开Tagbar
+map <C-n> :NERDTreeToggle<CR>               "Ctrl+n打开Nerdtree
+map mm :Minimap<CR>                         "打开右侧Minimap
+map mc :MinimapClose<CR>                    "关闭右侧Minimap
 
 
 

@@ -27,10 +27,10 @@ runtime macros/matchit.vim 		           "用%在关键字之间跳转
 
 """"""""主题颜色""""""""
 "colorschem molokai
-"colorschem Tomorrow-Night-Eighties
-syntax enable
-set background=dark
-colorscheme solarized
+colorschem Tomorrow-Night-Eighties
+"syntax enable
+"set background=dark
+"colorscheme solarized
 "hi String ctermfg=255 ctermbg=135
 "hi LinerNr ctermfg=90 ctermbg=0
 
@@ -48,9 +48,9 @@ Plug 'scrooloose/nerdtree'
 
 Plug 'https://github.com/w0rp/ale.git'
 
-Plug 'https://github.com/Valloric/YouCompleteMe.git'
+"Plug 'https://github.com/Valloric/YouCompleteMe.git'
 
-""Plug 'https://github.com/tomasr/molokai.git'
+"Plug 'https://github.com/tomasr/molokai.git'
 
 Plug 'https://github.com/majutsushi/tagbar.git'
 
@@ -60,9 +60,9 @@ Plug 'https://github.com/vim-airline/vim-airline-themes.git'
 
 Plug 'https://github.com/severin-lemaignan/vim-minimap.git'
 
-""Plug 'https://github.com/trusktr/seti.vim.git'
+"Plug 'https://github.com/trusktr/seti.vim.git'
 
-""Plug 'https://github.com/altercation/solarized.git'
+"Plug 'https://github.com/altercation/solarized.git'
 
 Plug 'https://github.com/tpope/vim-commentary.git'
 

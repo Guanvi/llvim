@@ -4,8 +4,7 @@
 
 
 
-+ 如何安装
-
++ 如何安装<br/>
 `git clone https://github.com/Guanvi/llivm.git`
 `cd llvim&&./install.sh`
 

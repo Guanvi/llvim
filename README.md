@@ -6,8 +6,9 @@
 
 + 如何安装<br/>
 ```
-git clone https://github.com/Guanvi/llivm.git
-cd llvim&&./install.sh
+git clone https://github.com/Guanvi/llvim.git
+cd llvim&&chmod 700 install.sh
+./install.sh
 ```
 
 

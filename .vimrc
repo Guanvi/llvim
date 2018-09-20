@@ -27,10 +27,10 @@ runtime macros/matchit.vim 		           "用%在关键字之间跳转
 
 """"""""主题颜色""""""""
 "colorschem molokai
-""colorschem Tomorrow-Night-Eighties
+colorschem Tomorrow-Night-Eighties
 "syntax enable
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 "hi String ctermfg=255 ctermbg=135
 "hi LinerNr ctermfg=90 ctermbg=0
 

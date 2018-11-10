@@ -26,8 +26,9 @@ runtime macros/matchit.vim 		           "用%在关键字之间跳转
 
 
 """"""""主题颜色""""""""
-"colorschem molokai
+""colorschem molokai
 colorschem Tomorrow-Night-Eighties
+"colorschem seti
 "syntax enable
 set background=dark
 "colorscheme solarized
@@ -90,6 +91,8 @@ Plug 'godlygeek/tabular'
 
 Plug 'plasticboy/vim-markdown'
 
+Plug 'https://github.com/flazz/vim-colorschemes.git'
+
 "其他插件......"
 
 
@@ -120,7 +123,8 @@ let g:ycm_key_invoke_completion = '<C-a>'
 set completeopt=longest,menu
 
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif         "离开插入模式后自动关闭预览窗口
-inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"    "回车即选中当前项
+inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"   
+"回车即选中当前项
 
 
 
@@ -179,4 +183,11 @@ inoremap ' ''<ESC>i
 inoremap " ""<ESC>i
 inoremap ( ()<ESC>i
 inoremap [ []<ESC>i
-inoremap { {<CR>}<ESC>O 
+""inoremap { {<CR>}<ESC>O 
+
+
+""""""""禁用上下左右键""""""""
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>

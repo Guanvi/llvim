@@ -71,7 +71,7 @@ Plug 'https://github.com/tpope/vim-commentary.git'
 
 "Plug 'maximbaz/lightline-ale'
 
-"Plug 'https://github.com/ryanoasis/nerd-fonts.git'
+""Plug 'https://github.com/ryanoasis/nerd-fonts.git'
 
 Plug 'https://github.com/tpope/vim-unimpaired.git'
 
@@ -83,7 +83,7 @@ Plug 'https://github.com/altercation/vim-colors-solarized.git'
 
 Plug 'mattn/emmet-vim'
 
-Plug 'ryanoasis/vim-devicons'   
+""Plug 'ryanoasis/vim-devicons'   
 
 Plug 'https://github.com/suan/vim-instant-markdown.git'
 
@@ -191,3 +191,12 @@ noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
+
+
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+""let g:airline#extensions#tabline#left_sep = ' '
+""let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+
+

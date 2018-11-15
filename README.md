@@ -17,3 +17,7 @@ cd llvim&&sh install.sh
 ```
 ./install.py --clang-completer --system-libclang
 ```
++ airline状态栏特殊符号字体</br>
+```
+sudo dnf install powerline-fonts
+```

@@ -13,7 +13,12 @@ set ruler                                "显示行号和列号
 set pastetoggle=<F3>                     "F3快捷键于paste模式与否之间转化，防止自动缩进
 set helplang=cn                          "设置为中文帮助文档,需下载并配置之后才生效
 set shortmess=atI                        " 启动的时候不显示援助乌干达儿童的提示
+set t_Co=256 				 "设置256色
+set showmatch          		         "高亮括号匹配
+set matchtime=1 	                 "匹配括号高亮的时间(十分之一秒)
 
+
+colorscheme Tomorrow-Night-Bright
 
 
 
@@ -29,6 +34,47 @@ Plug 'junegunn/vim-easy-align'
 Plug 'mattn/emmet-vim'
 Plug 'https://github.com/suan/vim-instant-markdown.git'
 Plug 'plasticboy/vim-markdown'
-"Plug 'https://github.com/flazz/vim-colorschemes.git'
+Plug 'https://github.com/flazz/vim-colorschemes.git'
 
+Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'octol/vim-cpp-enhanced-highlight'
 call plug#end()
+
+
+
+" use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
+
+""<cr>确认
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+
+""完成后关闭预览窗口
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+
+
+
+
+""airline""
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#formatter = 'default'
+let g:airline_powerline_fonts = 1
+let g:airline_theme='simple'
+
+"let g:airline_section_error = '%{airline#util#wrap(airline#extensions#coc#get_error(),0)}'
+"let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
+
+

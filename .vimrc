@@ -1,12 +1,13 @@
 """"""""Luohua"""""""'
-set nocompatible 
+set nocompatible 			 "vim自身命令行智能补全 
 filetype plugin on 
 set encoding=utf-8                       "使用utf-8编码
 set number                               "显示行号
 set showcmd                              "显示输入命令
 set clipboard=unnamed,unnamedplus        "可以从vim复制到剪贴版中
 set mouse=a                              "可以在buffer的任何地方使用鼠标
-"set cursorline                           "显示当前行
+set cursorline                           "显示当前行
+"set cursorcolumn 			 "现实当前列
 set hlsearch                             "显示高亮搜索
 set incsearch
 set ruler                                "显示行号和列号
@@ -17,8 +18,21 @@ set t_Co=256 				 "设置256色
 set showmatch          		         "高亮括号匹配
 set matchtime=1 	                 "匹配括号高亮的时间(十分之一秒)
 
+" 将制表符扩展为空格
+set expandtab
+" 设置编辑时制表符占用空格数
+set tabstop=2
+set softtabstop=2
+" 自动缩进代码
+set autoindent
+" 开启智能对齐
+set smartindent
+
+" 设置快捷键将选中文本块复制至系统剪贴板
+vnoremap <Leader>y "+y
 
 colorscheme Tomorrow-Night-Bright
+silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 
 
 
@@ -26,8 +40,10 @@ call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/tpope/vim-commentary.git'
 Plug 'https://github.com/tpope/vim-unimpaired.git'
 Plug 'https://github.com/tpope/vim-rails.git'
+Plug 'https://github.com/tpope/vim-repeat.git'
 Plug 'https://github.com/tpope/vim-bundler.git'
 Plug 'https://github.com/tpope/vim-abolish.git'
+Plug 'https://github.com/tpope/vim-surround.git'
 Plug 'https://github.com/nelstrom/vim-visual-star-search.git'
 "Plug 'https://github.com/kana/vim-textobj-entire.git'
 Plug 'junegunn/vim-easy-align'
@@ -41,6 +57,8 @@ Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'https://github.com/w0rp/ale.git'
+Plug 'https://github.com/jiangmiao/auto-pairs.git'
 call plug#end()
 
 
@@ -78,3 +96,18 @@ let g:airline_theme='simple'
 "let g:airline_section_warning = '%{airline#util#wrap(airline#extensions#coc#get_warning(),0)}'
 
 
+""ale""
+let g:ale_sign_error = '➼ '
+let g:ale_sign_warning = '⚠  '
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
+let g:airline#extensions#ale#enabled = 1
+let g:ale_lint_on_text_changed = 'never' 	"文件内容发生变化时不进行检测
+let g:ale_lint_on_enter = 1 		"打开文件就进行检查
+"let g:ale_sign_column_always = 1 	"始终开启检查
+let g:ale_set_highlights = 0
+
+
+
+"""auto-pairs"""
+let g:AutoPairsFlyMode = 1

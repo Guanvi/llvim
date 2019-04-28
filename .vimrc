@@ -36,7 +36,6 @@ Plug 'https://github.com/tpope/vim-repeat.git'
 Plug 'https://github.com/tpope/vim-bundler.git'
 Plug 'https://github.com/tpope/vim-abolish.git'
 Plug 'https://github.com/tpope/vim-surround.git'
-Plug 'https://github.com/tpope/vim-rsi.git'
 Plug 'https://github.com/nelstrom/vim-visual-star-search.git'
 "Plug 'https://github.com/kana/vim-textobj-entire.git'
 Plug 'junegunn/vim-easy-align'
@@ -94,8 +93,8 @@ let g:airline_theme='simple'
 
 
 ""--ale--""
-let g:ale_sign_error = '➼ '
-let g:ale_sign_warning = '⚠ '
+let g:ale_sign_error = ' ✗'
+let g:ale_sign_warning = ' ⚠'
 "highlight clear ALEErrorSign
 "highlight clear ALEWarningSign
 let g:airline#extensions#ale#enabled = 1
@@ -106,7 +105,7 @@ let g:ale_set_highlights = 1
 highlight ALEWarning ctermbg=240                        "设置警告背景颜色"
 highlight ALEError ctermbg=240                          "设置错误背景颜色"
 highlight ALEWarningSign ctermfg=226                    "设置警告标志前景颜色"
-highlight ALEErrorSign ctermfg=9                        "设置错误标志前景颜色"
+highlight ALEErrorSign ctermfg=124                        "设置错误标志前景颜色"
 
 
 ""--auto-pairs--"

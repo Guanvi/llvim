@@ -2,7 +2,7 @@
 ## 关于
 + 
 
-`a  ` &ensp;<small>在光标后插入/small>
+`a  ` &ensp;<small>在光标后插入</small>
 
 
 + 如何安装<br/>

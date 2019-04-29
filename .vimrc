@@ -19,6 +19,8 @@ set shortmess=atI                        " 启动的时候不显示援助乌干�
 set t_Co=256 				             "设置256色
 set showmatch          		             "高亮括号匹配
 set matchtime=1 	                     "匹配括号高亮的时间(十分之一秒)
+set termguicolors 			 "开启真彩色
+syntax on 				 "开启高亮
 
                                     
 

@@ -19,7 +19,7 @@ if [ $? -eq 0 ]
 then 
 	echo .vim/colors创建成功!
 fi
-cp Tomorrow-Night-Bright.vim ~/.vim/colors 
+cp Tomorrow-Night-Bright.vim molokai* ~/.vim/colors 
 echo 正在加载.vimrc配置文件...
 cp .vimrc ~/ 
 echo ".vimrc加载成功!"

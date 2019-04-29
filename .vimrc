@@ -19,12 +19,11 @@ set shortmess=atI                        " 启动的时候不显示援助乌干�
 set t_Co=256 				             "设置256色
 set showmatch          		             "高亮括号匹配
 set matchtime=1 	                     "匹配括号高亮的时间(十分之一秒)
-set termguicolors 			 "开启真彩色
-syntax on 				 "开启高亮
 
                                     
 
-colorscheme Tomorrow-Night-Bright        "设置vim主题
+"colorscheme Tomorrow-Night-Bright        "设置vim主题
+colorscheme molokai_dark        "设置vim主题
 
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 
@@ -95,8 +94,8 @@ let g:airline_theme='simple'
 
 
 ""--ale--""
-let g:ale_sign_error = ' ✗'
-let g:ale_sign_warning = ' ⚠'
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚠'
 "highlight clear ALEErrorSign
 "highlight clear ALEWarningSign
 let g:airline#extensions#ale#enabled = 1
@@ -107,7 +106,7 @@ let g:ale_set_highlights = 1
 highlight ALEWarning ctermbg=240                        "设置警告背景颜色"
 highlight ALEError ctermbg=240                          "设置错误背景颜色"
 highlight ALEWarningSign ctermfg=226                    "设置警告标志前景颜色"
-highlight ALEErrorSign ctermfg=124                        "设置错误标志前景颜色"
+highlight ALEErrorSign ctermfg=124                      "设置错误标志前景颜色"
 
 
 ""--auto-pairs--"

@@ -4,6 +4,7 @@ mkdir ~/.vim
 mkdir ~/.vim/autoload
 mkdir ~/.vim/colors
 mkdir ~/.vim/plugged
+cp .vimrc ~/.vimrc
 cp dracula.vim ~/.vim/colors/
 cp coc-settings.json ~/.vim/
 

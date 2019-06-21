@@ -1,5 +1,7 @@
 cd ~/
-[ -e .vim ]&&mv .vim .vim.back-$RANDOM
+i=$RANDOM
+[ -e .vim ]&&mv .vim .vim.back-$i
+[ -e .vimrc ]&&mv .vimrc .vimrc.back-$i
 mkdir ~/.vim
 mkdir ~/.vim/autoload
 mkdir ~/.vim/colors

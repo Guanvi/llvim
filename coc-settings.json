@@ -1,0 +1,36 @@
+{
+        "suggest.triggerAfterInsertEnter": false,
+        "suggest.snippetIndicator": "►",
+        "suggest.triggerAfterInsertEnter": true,
+        "suggest.timeout": 100,
+        "suggest.minTriggerInputLength": 2,
+        "suggest.acceptSuggestionOnCommitCharacter": true,
+
+
+
+
+        "languageserver": {
+                "ccls": {
+                        "command": "ccls",
+                        "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
+                        "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+                        "initializationOptions": {
+                                "cache": {
+                                        "directory": ".ccls-cache"
+                                }
+                        }
+                }
+        },
+
+        "languageserver": {
+                "intelephense": {
+                        "command": "intelephense",
+                        "args": ["--stdio"],
+                        "filetypes": ["php"],
+                        "initializationOptions": {
+                                "storagePath": "/tmp/intelephense"
+                        }
+                }
+        }
+}
+

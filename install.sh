@@ -17,4 +17,4 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 
 echo "Run PlugInstall by ex-mode in the vim"
-echo "then Run CocInstall coc-dictionary coc-tag coc-word coc-emoji coc-omni coc-syntax coc-gocode  coc-json  
+echo "then Run CocInstall coc-dictionary coc-tag coc-word coc-emoji coc-omni coc-syntax coc-gocode  coc-json  "
